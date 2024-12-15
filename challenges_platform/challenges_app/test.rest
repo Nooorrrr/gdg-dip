@@ -1,0 +1,101 @@
+### List Challenges
+GET http://localhost:8000/challenges/
+Authorization: Token your_access_token
+
+### Add a New Challenge (Superusers Only)
+POST http://localhost:8000/challenges/add/
+Content-Type: application/json
+Authorization: Token your_access_token
+
+{
+  "title": "New Challenge",
+  "description": "Challenge description",
+  "category": "Category",
+  "difficulty": "Easy",
+  "resources": "Resource links"
+}
+
+### Update a Challenge (Superusers Only)
+PUT http://localhost:8000/challenges/update/
+Content-Type: application/json
+Authorization: Token your_access_token
+
+{
+  "challenge_id": 1,
+  "title": "Updated Challenge",
+  "description": "Updated description",
+  "category": "Updated Category",
+  "resources": "Updated Resources",
+  "difficulty": "Medium"
+}
+
+### Delete a Challenge (Superusers Only)
+DELETE http://localhost:8000/challenges/delete/
+Content-Type: application/json
+Authorization: Token your_access_token
+
+{
+  "challenge_id": 1
+}
+
+### Add a New Submission (POST request)
+POST http://localhost:8000/submissions/add/
+Content-Type: application/json
+Authorization: Token your_access_token
+
+{
+  "challenge_id": 1,
+  "submission_link": "http://example.com/submission"
+}
+
+### Remove an Existing Submission (DELETE request)
+DELETE http://localhost:8000/submissions/remove/
+Content-Type: application/json
+Authorization: Token your_access_token
+
+{
+  "submission_id": 1
+}
+
+### Update an Existing Submission (PUT or PATCH request)
+PUT http://localhost:8000/submissions/update/
+Content-Type: application/json
+Authorization: Token your_access_token
+
+{
+  "submission_id": 1,
+  "submission_link": "http://example.com/updated_submission"
+}
+
+### Get All Submissions (GET request for admin users)
+GET http://localhost:8000/submissions/
+Authorization: Token your_access_token
+
+### Create a New Team (POST request)
+POST http://localhost:8000/teams/create/
+Content-Type: application/json
+Authorization: Token your_access_token
+
+{
+  "name": "New Team",
+  "password": "team_password"
+}
+
+### Get the Information of a Specific Team (GET request)
+GET http://localhost:8000/teams/1/
+Authorization: Token your_access_token
+
+### Join a Team (POST request)
+POST http://localhost:8000/teams/join/
+Content-Type: application/json
+Authorization: Token your_access_token
+
+{
+  "name": "Existing Team",
+  "password": "team_password"
+}
+
+### Leave a Team (POST request)
+POST http://localhost:8000/teams/leave/
+Content-Type: application/json
+Authorization: Token your_access_token
