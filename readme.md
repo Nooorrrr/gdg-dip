@@ -1,5 +1,6 @@
 # Project Name
-[PLS READ](https://docs.google.com/document/d/1sNSx06nf2QZmBv9MmJLghyoLiHEyQaDpuaBGsOC37DU/edit?usp=sharing)
+[PLS READ](https://docs.google.com/document/d/1sNSx06nf2QZmBv9MmJLghyoLiHEyQaDpuaBGsOC37DU/edit?usp=sharing)       
+     
 This project consists of both the **backend** and **frontend** components. The backend is built using **Django** as the web framework, with **PostgreSQL** as the database. REST APIs are implemented to handle various functionalities such as user authentication, challenge management, team creation, and submissions.
 
 ## Technologies Used
